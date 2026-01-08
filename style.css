@@ -1,0 +1,136 @@
+:root{
+    --bg: #f6f4f1;
+    --card: #ffffff;
+    --accent: #e8cfc4;
+    --text: #333;
+    --soft: #888;
+}
+
+body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, sans-serif;
+    padding: 20px;
+}
+
+.container{
+    width: 95%;
+    max-width: 900px;
+    margin: auto;
+    background: var(--card);
+    padding: 15px;
+    border-radius: 14px;
+}
+
+h1, h2, h3, h4, p{
+    text-align: center;
+}
+
+.planner_actions, .button_group_primary, .button_group_secondary{
+    flex-direction: column;
+    align-items: center;
+}
+
+.meal-row{
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.meal-row select, .meal-row label{
+    width: 100%;
+    max-width: 250px;
+}
+
+.hidden{
+    display: none;
+}
+
+.button_group_primary, .button_group_secondary{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.button_group_secondary{
+    margin-top: 15px;     
+}
+
+button{
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    background: var(--accent);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover{
+    background: #e0bfb1;
+    transform: scale(1.05);
+}
+
+.day-section{
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+#feedback{
+    text-align: center;
+    margin-bottom: 15px;
+    opacity: 0;
+    transition: opacity .3s;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #e8cfc4;
+    color: #333;
+    font-weight: 500;
+}
+
+#feedback.show{
+    opacity: 1;
+}
+
+#shopping_list li, #extras_list li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: #f9f9f9;
+    flex-wrap: wrap;
+}
+
+#shopping_list button, #extras_list button{
+    margin-left: auto;
+    background: transparent;
+    color: #333;
+    border-radius: 6px;
+    padding: 2px 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#shopping_list button:hover, #extras_list button:hover{
+    background: transparent;
+}
+
+
+#view_shopping h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.planner_actions{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}

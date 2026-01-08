@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Weekly meal planner</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header class="app_header"> 
+            <h1>Weekly meal planner</h1>
+            <p>Plan meals for your week, stay organized and save time!</p>
+        </header>
+
+        <main class="container">
+             <div id="feedback"></div>
+            
+            <section id="view_dashboard" class="view active">
+                <h2>Welcome!</h2>
+                <p>Everything you need for weekly meal planning in one place</p>
+
+                <div class="button_group_primary">
+                    <button data-action="open-planner">Plan weekly meals</button>
+                </div>
+
+
+                <div class="button_group_secondary">
+                    <button data-action="open-overview">Weekly overview</button>
+                    <button data-action="open-shopping">Shopping list</button>
+                    <button data-action="reset">Reset week</button>
+                    <button data-action="add-member">Add family member</button>
+                    <button data-action="remove-member">Remove family member</button>
+                </div>
+            </section>
+
+            <section id="view_planner" class="view hidden">
+                <button class="back_btn" data-action="back">Back</button>
+                <h2>Meal planner</h2>
+                <p>Select meals for each family member</p>
+
+                <div class="planner_actions">
+                    <button id="add_meal_btn">Add new meal</button>
+                    <button id="manage_meals_btn">Manage meals</button>
+                </div>
+                
+                <div id="manage_meals" class="hidden"></div>
+                <div id="meal_planner"></div>
+            </section>
+
+            <section id="view_shopping" class="view hidden">
+                <button class="back_btn" data-action="back">Back</button>
+                <button id="add_extra_item_btn">Add extra item</button>
+                <h2>Shopping list</h2>
+                <h3>Meals</h3>
+                <ul id="shopping_list"></ul>
+                <h3>Extras</h3>
+                <ul id="extras_list"></ul>
+            </section>
+
+            <section id="view_overview" class="view hidden">
+                <button class="back_btn" data-action="back">Back</button>
+                <h2>Weekly overview</h2>
+                <div id="overview_content"></div>
+            </section>
+
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
